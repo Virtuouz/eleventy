@@ -24,6 +24,9 @@ module.exports=config=>{
             return Number(a.fileSlug)> Number(b.fileSlug)? 1:-1
         })
     })
+    // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
+    config.secUseGitIgnore(false)
+
     return{
         markdownTemplateEngine:'njk',
         dataTemplateEngine:'njk',
